@@ -1,7 +1,7 @@
-FROM alpine
+FROM alpine:3.14.0
 
-RUN apk update                    && \
-    apk add --no-cache dumb-init
+RUN apk update                             && \
+    apk add --no-cache dumb-init=1.2.5-r1
 
 COPY echo-args.sh /
 
